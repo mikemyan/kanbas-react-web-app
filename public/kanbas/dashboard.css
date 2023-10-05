@@ -1,0 +1,22 @@
+.wd-dashboard {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+}
+
+.wd-dashboard-grid .col {
+    width: 260px;
+}
+
+.wd-dashboard-grid .col{
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}

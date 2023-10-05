@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Navigation</title>
-    </head>
-    <body>
-        <ul>
-            <li><a href="/kanbas/account.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/kanbas/courses.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-         </ul>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navigation</title>
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/kanbas/navigation.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/20e1c7347b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul class="wd-kanbas-navigation">
+      <li>
+        <a href="/kanbas/profile">
+          <i
+            class="fas fa-user-circle"
+            aria-hidden="true"
+            style="color: white"
+          ></i>
+          Account
+        </a>
+      </li>
+      <li class="wd-active">
+        <a href="/kanbas/dashboard.html">
+          <i class="fas fa-tachometer-alt"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/kanbas/courses.html">
+          <i class="fas fa-book"></i>
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="far fa-calendar-alt"></i>
+          Calendar
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-inbox"></i>
+          Inbox
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="far fa-clock"></i>
+          History
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-photo-video"></i>
+          Studio
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          Commons
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="far fa-question-circle"></i>
+          Help
+        </a>
+      </li>
+    </ul>
+  </body>
 </html>

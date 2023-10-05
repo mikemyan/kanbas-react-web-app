@@ -1,0 +1,28 @@
+.wd-kanbas-navigation-new {
+  background-color: white;
+  list-style: none;
+  padding: 20px;
+  /* width: 85px; */
+  margin: 20px;
+}
+
+.wd-kanbas-navigation-new li {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+
+.wd-kanbas-navigation-new li a {
+  color: red;
+  text-decoration: none;
+}
+
+.wd-kanbas-navigation-new a i {
+  color: red;
+  font-size: 2.3rem;
+  padding-right: 10px;
+}
+
+.wd-kanbas-navigation-new .float-end {
+  font-size: 1rem;
+}

@@ -3,80 +3,162 @@
     <head>
         <meta charset="UTF-8">
         <title>Profile Edit</title>
+        <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/styles.css" rel="stylesheet"/>
+        <link href="/kanbas/navigation.css" rel="stylesheet"/>
+        <link href="/kanbas/courses.css" rel="stylesheet"/>
+        <link href="/kanbas/profile/index.css" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/20e1c7347b.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="/vendors/bootstrap/css/bootstrap.min.js"></script>
     </head>
     <body>
-        <table width="100%">
-            <tbody>
-            <tr valign="baseline">
-                <td>
-                    <ul>
-                        <li><a href="/kanbas/account.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="/kanbas/courses.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                     </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="/kanbas/profile">Profile</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">ePortfolios</a></li>
-                        <li><a href="#">Shared Content</a></li>
-                        <li><a href="#">The Hub</a></li>
-                        <li><a href="#">Qwickly Course Tools</a></li>
-                        <li><a href="#">Global Announcements</a></li>
-                     </ul>
-                </td>
-                <td>
-                    <h2>Ming (Mike) Yan</h2>
+        <div class="wd-flex-row-container">
+            <div class="bg-black">
+                <ul class="wd-kanbas-navigation">
+                    <li class="wd-active">
+                        <a href="/kanbas/profile">
+                            <i class="fas fa-user-circle" aria-hidden="true" style="color: lightgray;"></i>
+                            Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/kanbas/dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/kanbas/home.html">
+                            <i class="fas fa-book"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="far fa-calendar-alt"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-inbox"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="far fa-clock"></i>
+                            History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-photo-video"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Commons
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="far fa-question-circle"></i>
+                            Help
+                        </a>
+                    </li>
+                 </ul>
+            </div>
+            <div>
+                <ul class="wd-course-navigation">
+                    <li><a href="#">Notifications</a></li>
+                    <li class="wd-active"><a href="/kanbas/profile">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Qwickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                 </ul>
+            </div>
+            <div class="wd-edit-profile-main">
+                <header><h3>Ming (Mike) Yan's Profile</h3><hr></header>
+                    <i id="profile-icon" class="fas fa-user-circle" aria-hidden="true" style="color: lightgray;"></i>
                     <form>
-                        <label for="text-fields-name">Name:*</label>
-                        <input type="text" id="text-fields-name" value="Mike Yan"/>
-                        <label for="dropdown-pronouns">Pronouns:</label>
-                        <select>
-                            <option selected id="dropdown-pronouns" value="None">None</option>
-                        </select><br/><br/>
-                        <label for="text-fields-title">Title:</label>
-                        <input type="text" id="text-fields-title"/>
+                        <div class="mb-3">
+                        <label for="text-fields-name"><b>Name:*</b></label><br/>
+                        <input class="form-control" type="text" id="text-fields-name" value="Mike Yan"/><br/>
+                        </div>
+                        <div class="dropdown">
+                            <label for="dropdown-pronouns"><b>Pronouns:</b></label><br/>
+                            <button
+                              class="btn btn-outline-dark dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              None
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">He/Him</a></li>
+                              <li><a class="dropdown-item" href="#">She/Her</a></li>
+                            </ul>
+                        </div>
+                        <div class="mb-3">
+                        <label for="text-fields-title"><b>Title:</b></label><br/>
+                        <input class="form-control" type="text" id="text-fields-title"/>
+                        </div>
                         <h2>Contact</h2>
                         <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
                         <h2>Biography</h2>
-                        <textarea cols="50" rows="3">Graduate Student, Software Engineer.</textarea>
+                        <div class="mb-3">
+                        <textarea class="form-control" cols="50" rows="3">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                        </div>
                         <h2>Links</h2>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/mike-y-a3852694/">LinkedIn</a></li>
                         </ul><br/><br/>
 
-                        <table>
-                            <tr valign="baseline">
-                                <td>
-                                    <label for="text-fields-link-title"><b>Title</b></label><br/>
-                                    <input type="text" id="text-fields-link-title" value="Youtube"/>->
-                                </td>
-                                <td>
-                                    <label for="text-fields-link-url"><b>URL</b></label><br/>
-                                    <input type="text" id="text-fields-link-url" value="https://www.youtube.com"/>
-                                </td>
-                            </tr>
-                        </table>
-                        <a href="#">Remove</a><br/><br/>
-                        <button type="button">Add another link</button><br/>
-                        <button type="button">Cancel</button>
-                        <button type="button" onclick="window.location.href='/kanbas/profile/index.html'">Save Profile</button><br/>
-                        <button type="button">Edit Profile</button>
-                        <button type="button" onclick="window.location.href='/kanbas/profile/index.html'">Cancel Editing</button>
+                        <div class="container text-center">
+                            <div class="row">
+                              <div class="col">
+                                <label for="text-fields-link-title"><h6>Title</h6></label><br/>
+                              </div>
+                              <div class="col">
+                                <label for="text-fields-link-url"><h6>URL</h6></label><br/>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control" type="text" id="text-fields-link-title" value="Youtube"/>
+                                </div>
+                                <div class="col-1">
+                                    <i class="fas fa-long-arrow-alt-right fa-lg" style="color: #000000;"></i>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" type="text" id="text-fields-link-url" value="https://www.youtube.com"/>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#"><i class="fas fa-times fa-sm" style="color: #ff2600;"></i></a><br/><br/>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light">Add another link</button><br/>
+                        <div class="wd-float-right">
+                            <button type="button" class="btn btn-light" onclick="window.location.href='/kanbas/profile/index.html'">Cancel</button>
+                            <button type="button" class="btn btn-danger" onclick="window.location.href='/kanbas/profile/index.html'">Save Profile</button><br/>
+                        </div>
                     </form>
-                    
-                </td>
-            </tr>
-            </tbody>
-         </table>
+            </div>
+            <div>
+                <button class="wd-cancel-edit-button btn btn-light float-end" type="button" onclick="window.location.href='/kanbas/profile/index.html'">
+                    <i class="fas fa-pencil-alt fa-rotate-270 fa-sm"></i>
+                     Cancel Profile
+                </button>
+            </div>
     </body>
 </html>
