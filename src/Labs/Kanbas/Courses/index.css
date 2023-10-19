@@ -1,0 +1,15 @@
+.wd-breadcrumb {
+  color: red;
+}
+
+.breadcrumb {
+  margin-left: 20px;
+}
+
+.breadcrumb li {
+  font-size: 1.6rem;
+}
+
+.wd-breadcrumb-divider {
+  --bs-breadcrumb-divider: ">";
+}

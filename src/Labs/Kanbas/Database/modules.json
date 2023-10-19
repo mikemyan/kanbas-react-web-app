@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Basic principles of rocket propulsion and rocket engines.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "name": "Introduction to Rocket Propulsion I",
+        "description": "Rocket propulsion is the science of accelerating matter to extreme velocities. It is the foundation of spaceflight and the key to exploring the cosmos. This course will introduce you to the basic principles of rocket propulsion and rocket engines. You will learn about the history of rocketry, the basic principles of rocket propulsion, and the design and operation of rocket engines."
+      },
+      {
+        "name": "Introduction to Rocket Propulsion II",
+        "description": "The course will cover the following topics:"
+      },
+      {
+        "name": "Introduction to Rocket Propulsion III",
+        "description": "The course will be taught by Dr. John Doe, a professor of Aerospace Engineering at the University of Rocket Science. Dr. Doe has over 20 years of experience in the field of rocket propulsion and has worked on numerous rocket engine projects for NASA and the U.S. Air Force."
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Fuel and Combustion",
+    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "name": "Fuel and Combustion I",
+        "description": "Rocket fuel is a key component of rocket propulsion. It is the fuel that powers the rocket engine and propels the rocket into space. Rocket fuel is typically a liquid or solid propellant that is burned in a combustion chamber to produce thrust. The most common types of rocket fuel are liquid hydrogen and liquid oxygen, which are used in the Space Shuttle's main engines. Solid rocket fuel is also used in the Space Shuttle's solid rocket boosters."
+      },
+      {
+        "name": "Fuel and Combustion II",
+        "description": "The combustion process is the chemical reaction that occurs when a fuel is burned in the presence of oxygen. The combustion process is what produces the energy that powers the rocket engine. The combustion process is also what produces the exhaust gases that propel the rocket into space. The combustion process is a complex chemical reaction that involves the breaking and forming of chemical bonds. The combustion process is also what produces the heat that is used to power the rocket engine."
+      },
+      {
+        "name": "Fuel and Combustion III",
+        "description": "The efficiency of a rocket engine is the ratio of the amount of energy produced by the engine to the amount of energy consumed by the engine. The efficiency of a rocket engine is determined by the efficiency of the combustion process, the efficiency of the nozzle, and the efficiency of the propellant. The efficiency of a rocket engine is also affected by the efficiency of the rocket's aerodynamic design."
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Nozzle Design",
+    "description": "Principles of rocket nozzle design and performance optimization.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "name": "Nozzle Design I",
+        "description": "The nozzle is the part of the rocket engine that converts the high pressure, high temperature gases produced by the combustion process into a high velocity jet of gas. The nozzle is the most important part of the rocket engine because it determines the performance of the engine. The nozzle is also the most complex part of the rocket engine because it must be designed to withstand the extreme temperatures and pressures of the combustion process."
+      },
+      {
+        "name": "Nozzle Design II",
+        "description": "The nozzle is the part of the rocket engine that converts the high pressure, high temperature gases produced by the combustion process into a high velocity jet of gas. The nozzle is the most important part of the rocket engine because it determines the performance of the engine. The nozzle is also the most complex part of the rocket engine because it must be designed to withstand the extreme temperatures and pressures of the combustion process."
+      },
+      {
+        "name": "Nozzle Design III",
+        "description": "The nozzle is the part of the rocket engine that converts the high pressure, high temperature gases produced by the combustion process into a high velocity jet of gas. The nozzle is the most important part of the rocket engine because it determines the performance of the engine. The nozzle is also the most complex part of the rocket engine because it must be designed to withstand the extreme temperatures and pressures of the combustion process."
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "name": "Fundamentals of Aerodynamics I",
+        "description": "Aerodynamics is the study of the motion of air and other gases, and the forces acting on objects as they move through the air. Aerodynamics is a branch of fluid dynamics, which is the study of the motion of fluids, such as liquids and gases. Aerodynamics is also a branch of physics, which is the study of the motion of matter and energy."
+      },
+      {
+        "name": "Fundamentals of Aerodynamics II",
+        "description": "Aerodynamics is the study of the motion of air and other gases, and the forces acting on objects as they move through the air. Aerodynamics is a branch of fluid dynamics, which is the study of the motion of fluids, such as liquids and gases. Aerodynamics is also a branch of physics, which is the study of the motion of matter and energy."
+      },
+      {
+        "name": "Fundamentals of Aerodynamics III",
+        "description": "Aerodynamics is the study of the motion of air and other gases, and the forces acting on objects as they move through the air. Aerodynamics is a branch of fluid dynamics, which is the study of the motion of fluids, such as liquids and gases. Aerodynamics is also a branch of physics, which is the study of the motion of matter and energy."
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Subsonic and Supersonic Flow",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "name": "Subsonic and Supersonic Flow I",
+        "description": "Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound. Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound."
+      },
+      {
+        "name": "Subsonic and Supersonic Flow II",
+        "description": "Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound. Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound."
+      },
+      {
+        "name": "Subsonic and Supersonic Flow III",
+        "description": "Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound. Subsonic flow is the flow of a fluid at a speed that is less than the speed of sound. Supersonic flow is the flow of a fluid at a speed that is greater than the speed of sound."
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Aerodynamic Heating",
+    "description": "Study of aerodynamic heating and thermal protection systems.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "name": "Aerodynamic Heating I",
+        "description": "Aerodynamic heating is the heating of a body due to the frictional forces of the air flowing over it. Aerodynamic heating is a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure. Aerodynamic heating is also a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure."
+      },
+      {
+        "name": "Aerodynamic Heating II",
+        "description": "Aerodynamic heating is the heating of a body due to the frictional forces of the air flowing over it. Aerodynamic heating is a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure. Aerodynamic heating is also a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure."
+      },
+      {
+        "name": "Aerodynamic Heating III",
+        "description": "Aerodynamic heating is the heating of a body due to the frictional forces of the air flowing over it. Aerodynamic heating is a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure. Aerodynamic heating is also a major concern for high-speed aircraft and spacecraft, as it can cause structural damage and failure."
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Spacecraft Structural Design",
+    "description": "Fundamentals of designing spacecraft structures and materials selection.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "name": "Spacecraft Structural Design I",
+        "description": "Spacecraft structural design is the process of designing the structure of a spacecraft. The structure of a spacecraft is the framework that supports the spacecraft's components and payload. The structure of a spacecraft is also the framework that supports the spacecraft's propulsion system. The structure of a spacecraft is also the framework that supports the spacecraft's thermal control system. The structure of a spacecraft is also the framework that supports the spacecraft's electrical power system. The structure of a spacecraft is also the framework that supports the spacecraft's communications system. The structure of a spacecraft is also the framework that supports the spacecraft's attitude control system. The structure of a spacecraft is also the framework that supports the spacecraft's scientific instruments."
+      },
+      {
+        "name": "Spacecraft Structural Design II",
+        "description": "Spacecraft structural design is the process of designing the structure of a spacecraft. The structure of a spacecraft is the framework that supports the spacecraft's components and payload. The structure of a spacecraft is also the framework that supports the spacecraft's propulsion system. The structure of a spacecraft is also the framework that supports the spacecraft's thermal control system. The structure of a spacecraft is also the framework that supports the spacecraft's electrical power system. The structure of a spacecraft is also the framework that supports the spacecraft's communications system. The structure of a spacecraft is also the framework that supports the spacecraft's attitude control system. The structure of a spacecraft is also the framework that supports the spacecraft's scientific instruments."
+      },
+      {
+        "name": "Spacecraft Structural Design III",
+        "description": "Spacecraft structural design is the process of designing the structure of a spacecraft. The structure of a spacecraft is the framework that supports the spacecraft's components and payload. The structure of a spacecraft is also the framework that supports the spacecraft's propulsion system. The structure of a spacecraft is also the framework that supports the spacecraft's thermal control system. The structure of a spacecraft is also the framework that supports the spacecraft's electrical power system. The structure of a spacecraft is also the framework that supports the spacecraft's communications system. The structure of a spacecraft is also the framework that supports the spacecraft's attitude control system. The structure of a spacecraft is also the framework that supports the spacecraft's scientific instruments."
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Orbital Mechanics",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "name": "Orbital Mechanics I",
+        "description": "Orbital mechanics is the study of the motion of objects in orbit around a celestial body. Orbital mechanics is a branch of celestial mechanics, which is the study of the motion of objects in space. Orbital mechanics is also a branch of physics, which is the study of the motion of matter and energy."
+      },
+      {
+        "name": "Orbital Mechanics II",
+        "description": "Orbital mechanics is the study of the motion of objects in orbit around a celestial body. Orbital mechanics is a branch of celestial mechanics, which is the study of the motion of objects in space. Orbital mechanics is also a branch of physics, which is the study of the motion of matter and energy."
+      },
+      {
+        "name": "Orbital Mechanics III",
+        "description": "Orbital mechanics is the study of the motion of objects in orbit around a celestial body. Orbital mechanics is a branch of celestial mechanics, which is the study of the motion of objects in space. Orbital mechanics is also a branch of physics, which is the study of the motion of matter and energy."
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Spacecraft Systems Engineering",
+    "description": "Overview of spacecraft systems and subsystems engineering.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "name": "Spacecraft Systems Engineering I",
+        "description": "Spacecraft systems engineering is the process of designing and developing a spacecraft. Spacecraft systems engineering is a branch of aerospace engineering, which is the study of the design, development, and operation of aircraft and spacecraft. Spacecraft systems engineering is also a branch of systems engineering, which is the study of the design, development, and operation of complex systems."
+      },
+      {
+        "name": "Spacecraft Systems Engineering II",
+        "description": "Spacecraft systems engineering is the process of designing and developing a spacecraft. Spacecraft systems engineering is a branch of aerospace engineering, which is the study of the design, development, and operation of aircraft and spacecraft. Spacecraft systems engineering is also a branch of systems engineering, which is the study of the design, development, and operation of complex systems."
+      },
+      {
+        "name": "Spacecraft Systems Engineering III",
+        "description": "Spacecraft systems engineering is the process of designing and developing a spacecraft. Spacecraft systems engineering is a branch of aerospace engineering, which is the study of the design, development, and operation of aircraft and spacecraft. Spacecraft systems engineering is also a branch of systems engineering, which is the study of the design, development, and operation of complex systems."
+      }
+    ]
+  }
+]
