@@ -1,4 +1,5 @@
 import db from "../../Kanbas/Database";
+import { FiMenu } from "react-icons/fi";
 import "./index.css";
 import {
   Navigate,
@@ -44,6 +45,7 @@ function Courses() {
           style={{
             left: "320px",
             top: "50px",
+            overflowX: "hidden",
           }}
         >
           <Routes>

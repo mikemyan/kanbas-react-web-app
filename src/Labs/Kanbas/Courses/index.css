@@ -13,3 +13,7 @@
 .wd-breadcrumb-divider {
   --bs-breadcrumb-divider: ">";
 }
+
+.breadcrumb-item.active {
+  color: red;
+}
