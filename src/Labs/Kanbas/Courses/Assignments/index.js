@@ -1,15 +1,30 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
 import { LuMoreVertical } from "react-icons/lu";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  selectAssignment,
+} from "./assignmentsReducer";
 
 function Assignments() {
+  const navigate = useNavigate();
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
+  );
+  const assignment = useSelector(
+    (state) => state.assignmentsReducer.assignment
+  );
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+  const dispatch = useDispatch();
   return (
     <div>
       <h2>Assignments for course {courseId}</h2>
@@ -22,7 +37,12 @@ function Assignments() {
       </div>
       <div className="float-end me-4">
         <button className="btn btn-light ms-2">+ Group</button>
-        <button className="btn btn-danger ms-2">+ Assignment</button>
+        <Link
+          to={`/Kanbas/Courses/${courseId}/Assignments/AddNew`}
+          className="btn btn-danger ms-2"
+        >
+          + Assignment
+        </Link>
         <button className="btn btn-light ms-2">
           <LuMoreVertical style={{ fontSize: "1.2em" }} className="mb-1" />
         </button>
@@ -31,13 +51,26 @@ function Assignments() {
       <hr className="me-4" />
       <div className="list-group me-4">
         {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item"
-          >
-            {assignment.title}
-          </Link>
+          <div>
+            <div
+              key={assignment._id}
+              className="list-group-item"
+              onClick={() => {
+                dispatch(selectAssignment(assignment));
+                navigate(
+                  `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`
+                );
+              }}
+            >
+              {assignment.title}
+            </div>
+            <button
+              className="btn btn-danger my-2 me-2 float-end"
+              onClick={() => dispatch(deleteAssignment(assignment._id))}
+            >
+              Delete
+            </button>
+          </div>
         ))}
       </div>
     </div>

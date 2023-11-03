@@ -17,3 +17,7 @@
   margin-right: 15px;
   margin-left: 30px;
 }
+
+.wd-home-tabs-float-done {
+  clear: both;
+}
