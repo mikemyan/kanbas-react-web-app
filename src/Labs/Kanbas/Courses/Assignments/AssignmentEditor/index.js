@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "../../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addAssignment,
@@ -8,6 +7,7 @@ import {
   updateAssignment,
   selectAssignment,
 } from "../assignmentsReducer";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
@@ -33,6 +33,33 @@ function AssignmentEditor() {
     dispatch(updateAssignment({ assignment }));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment._id, assignment);
+    dispatch(updateAssignment(assignment));
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+  useEffect(() => {
+    if (isNewAssignment) {
+      const currentAssignment = {
+        title: "New Assignment",
+        description: "New Assignment Description",
+        points: "98",
+        due: "2021-01-15",
+        from: "2021-01-01",
+        until: "2021-02-01",
+      };
+      dispatch(selectAssignment(currentAssignment));
+    } else {
+      const currentAssignment = assignments.find((a) => a._id === assignmentId);
+      dispatch(selectAssignment(currentAssignment));
+    }
+  }, [assignmentId]);
   return (
     <div>
       <h2>Assignment Name</h2>
@@ -143,7 +170,9 @@ function AssignmentEditor() {
           Cancel
         </Link>
         <button
-          onClick={isNewAssignment ? handleSave : handleUpdate}
+          onClick={
+            isNewAssignment ? handleAddAssignment : handleUpdateAssignment
+          }
           className="btn btn-success me-2"
         >
           Save

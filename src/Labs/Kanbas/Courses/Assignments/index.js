@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import db from "../../Database";
 import "./index.css";
 import { LuMoreVertical } from "react-icons/lu";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  setAssignments,
   addAssignment,
   deleteAssignment,
   updateAssignment,
   selectAssignment,
 } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Assignments() {
   const navigate = useNavigate();
@@ -25,6 +26,17 @@ function Assignments() {
     (assignment) => assignment.course === courseId
   );
   const dispatch = useDispatch();
+  useEffect(() => {
+    client
+      .findAssignmentsForCourse(courseId)
+      .then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
   return (
     <div>
       <h2>Assignments for course {courseId}</h2>
@@ -66,7 +78,7 @@ function Assignments() {
             </div>
             <button
               className="btn btn-danger my-2 me-2 float-end"
-              onClick={() => dispatch(deleteAssignment(assignment._id))}
+              onClick={() => handleDeleteAssignment(assignment._id)}
             >
               Delete
             </button>

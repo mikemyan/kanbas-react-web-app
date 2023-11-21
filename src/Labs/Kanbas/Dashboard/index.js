@@ -22,7 +22,13 @@ function Dashboard({
           Add
         </button>
 
-        <button className="btn btn-primary ms-2" onClick={updateCourse}>
+        <button
+          className="btn btn-primary ms-2"
+          onClick={(event) => {
+            event.preventDefault();
+            updateCourse(course);
+          }}
+        >
           Update
         </button>
       </div>
@@ -83,7 +89,7 @@ function Dashboard({
                 className="btn btn-danger"
                 onClick={(event) => {
                   event.preventDefault();
-                  deleteCourse(course._id);
+                  deleteCourse(course);
                 }}
               >
                 Delete

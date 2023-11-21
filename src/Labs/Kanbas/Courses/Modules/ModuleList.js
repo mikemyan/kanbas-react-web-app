@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../../Database";
 import { FiPlus } from "react-icons/fi";
@@ -6,20 +6,41 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { LuMoreVertical } from "react-icons/lu";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  setModules,
   addModule,
   deleteModule,
   updateModule,
   setModule,
 } from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
+  const dispatch = useDispatch();
   const { courseId } = useParams();
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((response) => dispatch(setModules(response)));
+  }, [courseId]);
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
-  const dispatch = useDispatch();
 
   const handleButton = () => {
     console.log("Actually saving assignment TBD in later assignments");
+  };
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module._id, module);
+    dispatch(updateModule(module));
   };
   return (
     <div>
@@ -76,15 +97,13 @@ function ModuleList() {
           <li className="list-group-item">
             <button
               className="btn btn-success float-end mt-2"
-              onClick={() =>
-                dispatch(addModule({ ...module, course: courseId }))
-              }
+              onClick={handleAddModule}
             >
               Add
             </button>
             <button
               className="btn btn-primary float-end mt-2 me-2"
-              onClick={() => dispatch(updateModule(module))}
+              onClick={handleUpdateModule}
             >
               Update
             </button>
@@ -117,7 +136,7 @@ function ModuleList() {
                 </button>
                 <button
                   className="btn btn-danger float-end"
-                  onClick={() => dispatch(deleteModule(module._id))}
+                  onClick={() => handleDeleteModule(module._id)}
                 >
                   Delete
                 </button>

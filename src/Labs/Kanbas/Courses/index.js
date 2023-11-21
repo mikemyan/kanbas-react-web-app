@@ -1,6 +1,8 @@
 import db from "../../Kanbas/Database";
 import { FiMenu } from "react-icons/fi";
 import "./index.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {
   Navigate,
   Route,
@@ -16,11 +18,20 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [empty, kanbas, classes, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  const URL = "https://kanbas-node-server-app-2vdz.onrender.com/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+  // const course = courses.find((course) => course._id === courseId);
   return (
     <div>
       <nav className="wd-breadcrumb-divider" aria-label="breadcrumb">
