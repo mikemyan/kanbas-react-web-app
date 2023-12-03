@@ -12,6 +12,8 @@ import "./index.css";
 
 function KanbasNavigation() {
   const links = [
+    "Signin",
+    "Signup",
     "Account",
     "Dashboard",
     "Courses",
